@@ -9,3 +9,23 @@
 .size-48 { font-size: 48px; }
 .size-60 { font-size: 60px; }
 .size-72 { font-size: 72px; }
+
+.page-title {
+	font-size: large;
+	font-family: 'Roboto', sans-serif;
+    position: absolute;
+    color: azure;
+}
+
+.menu a {
+	color: azure;
+}
+
+.menu.vertical{
+	margin: 5%;
+	width: 125px;
+}
+
+.position-left {
+	width: 165px;
+}

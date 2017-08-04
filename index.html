@@ -13,21 +13,32 @@
     <!-- Off-Canvas -->
     <div class="off-canvas-wrapper">  
       <!-- Sidebar-->
-      <div class="off-canvas position-left reveal-for-medium " id="offCanvasLeft" data-off-canvas>
+      <div class="off-canvas position-left reveal-for-medium " id="offCanvasLeft" data-off-canvas data-transition="overlap">
+        <!-- Close button -->
+        <button class="close-button" aria-label="Close menu" type="button" data-close>
+          <span aria-hidden="true"><i class="fi-x size-18"></i></span>
+        </button>
+
+        <!-- Menus -->
         <ul class="menu vertical">
           <li><a href="#" > <i class="fi-home size-16"></i> Home</a> </li>
           <li><a href="#" > <i class="fi-mail size-16"></i> Contact</a> </li>
-          <li><a href="https://github.com/xNarvik" target="_blank"> <i class="fi-social-github size-16"></i> GitHub</a> </li>
-          <li><a href="https://www.linkedin.com/in/kevin-hsieh/" target="_blank"> <i class="fi-social-linkedin size-16"></i> LinkedIn</a> </li>
-          <li><a href="/assets/docs/Resume_Kevin_Hsieh.pdf" target="_blank"> <i class="fi-clipboard-notes size-16"></i> Resume</a> </li>
+          <div title="github.com/xNarvik"><li><a href="https://github.com/xNarvik" target="_blank"> <i class="fi-social-github size-16"></i> GitHub</a> </li></div>
+          <div title="linkedin.com/in/kevin-hsieh"><li><a href="https://www.linkedin.com/in/kevin-hsieh/" target="_blank"> <i class="fi-social-linkedin size-16"></i> LinkedIn</a> </li></div>
+          <!-- TODO: hide resume path -->
+          <li><a href="assets/docs/Resume_Kevin_Hsieh.pdf" target="_blank"> <i class="fi-clipboard-notes size-16"></i> Resume</a> </li>
           <li><a href="#" > <i class="fi-torso size-16"></i> About Me</a> </li>
         </ul>
+        <!-- End Menu -->
       </div>
-      <!-- end Sidebar -->
+      <!-- End Sidebar -->
 
       <div class="off-canvas-content" data-off-canvas-content>
-        <!-- body content -->
-        <button type="button" class="button" data-toggle="offCanvasLeft"><i class="fi-list size-18"></i></button>
+        <!-- Home body content -->
+        <!-- Show Sidebar Button -->
+        <button type="button" class="button show-for-small-only" data-toggle="offCanvasLeft"><i class="fi-list size-18"></i></button>
+
+        <h1 class="page-title"> Kevin Hsieh </h1>
       </div>
     </div>
 
