@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Bridge Demo</title>
+  <!--<script type="text/javascript" src="../../jsdist/WVEmbed.min.js"></script>-->
+  <script type="text/javascript" src="http://cdn-contentviewer.adobe.com/public/pepper/wvel/2/WVEmbed.min.js"></script>
+  
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  
+</head>
+
+<body>
+
+  <div id="mainContainer">
+    <!-- Iframe destination -->
+  </div>
+  
+  <script type="text/javascript">
+    var wvQueryParamGroups = location.search.match(/[?&^#]wv=(s[\/%\-.\w]+)/),
+    wvQueryParam = wvQueryParamGroups && wvQueryParamGroups.length === 2 ? decodeURIComponent(wvQueryParamGroups[1]) : null;
+    
+    function eventCallback (message) {
+      console.log(message);
+      return true;
+    }
+  
+    function errorCallback (message) {
+      console.log(message);
+      return true;
+    }
+    
+    function redirectCallbackHandler (message) {
+      console.log(message); 
+    }
+
+    var bridge = adobeDPS.frameService.createFrame({
+      boolIsFullScreen : false,
+      parentDiv : 'mainContainer',
+      wrapperClasses : 'uniqueFrame',
+      iframeID : 'demoFrame',
+      accountIDs : 
+      'd3cde2050ee84b28ac6004d28425f0f3', 
+      wvParam : wvQueryParam ? wvQueryParam : 
+    '/s/Photonbursting/d3cde2050ee84b28ac6004d28425f0f3/DPS Tips Tips/00_Cover_Stack.html',
+      curtainClasses : 'mask hidden', 
+      eventCallback : eventCallback, 
+      errorCallback : errorCallback,
+      redirectCallback : redirectCallbackHandler,
+      footer : [
+        'Copyright ©2013 Adobe Systems Inc. All Rights use to be Reserved'
+      ]
+    });
+
+  </script>
+
+</body>
+</html>
+
