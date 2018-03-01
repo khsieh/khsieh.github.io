@@ -1,0 +1,48 @@
+/* h1{color: rgb(5, 255, 46);
+    background-color: black;
+}
+
+p{
+  color: mediumpurple;
+  text-align: center;
+  font-style: italic;
+  font-size: 20px;
+} */
+
+/* .button is now a class because of the . */
+/* .button{ */
+    /* colors the text maroon */
+    /* color: maroon;
+    background-color: powderblue;
+} */
+
+#banner{
+    position: static;
+    width: 50%;
+    height: 200px;
+    margin-left: 270px;
+   
+}
+
+body{
+    background-image: url("PirateBackground.jpg");
+    background-size: cover;
+}
+
+.textImage{
+    color: white;
+    background-color: black;
+    margin-top: 50px;
+    text-align: center;
+    display: block;
+    font-family: cursive;
+    font-weight: bold
+}
+
+.buttonPos{
+    color: black;
+    background-color: burlywood;
+    margin-top: 50px;
+    margin-left: 740px;
+    font-family: cursive;
+}
